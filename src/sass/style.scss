@@ -1,6 +1,10 @@
-*
-	font-family: 'MuseoModerno', sans-serif
-@import "variables"
-@import "mixins"
-@import "general"
-@import "media"
+@import 'base/variables';
+
+.container {
+	max-width: 945px;
+	margin: 0 auto;
+}
+
+@import 'blocks/promo';
+@import 'blocks/header';
+@import 'blocks/buttons';

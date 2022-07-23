@@ -1,0 +1,123 @@
+@media (max-width: 1100px){
+    .prev, .next {
+        display: none;
+    }
+    .tns-outer {
+        position: relative;
+    }
+    .tns-nav {
+        position: absolute;
+        top: 100%;
+        right: 50%;
+        button {
+            border-radius: 100%;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            background-color: $main-color;
+            border: none;
+        }
+
+    }
+
+}
+
+@media (max-width: 720px) {
+    header.header {
+        a {
+            img {
+                width: 100%;
+            }
+        }
+        .header__logo {
+            width: 166px;
+        }
+        .header__official {
+            font-size: 11px;
+            span {
+                font-size: 11px;
+            }
+        }
+        .header__contacts {
+            a {
+                font-size: 16px;
+                margin-bottom: 3px;
+            }
+        }
+}
+
+    .benefits {
+        &__blocks {
+            flex-direction: column;
+        }
+        &__blocks>div {
+        .benefits__subtext {
+            margin-top: 10px;
+            margin-bottom: 40px;
+            }
+        .benefits__text {
+            margin-top: 20px;
+        }
+        }
+
+    } 
+}
+
+@media (max-width: 540px) {
+    header.header {
+        a {
+            img {
+                width: 100%;
+            }
+        }
+        .header__logo {
+            width: 166px;
+        }
+        .header__official {
+            font-size: 11px;
+            span {
+                font-size: 11px;
+            }
+        }
+        .header__contacts {
+            a {
+                font-size: 16px;
+                margin-bottom: 3px;
+            }
+        }
+    }
+    .carousel {
+        &__inner {
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .tns-nav {
+        transform: translateX(50%);
+    }
+
+}
+
+@media (max-width: 400px) {
+    h1.promo{
+        &__header {
+            font-size: 30px;
+        }
+    }
+    h2.promo {
+        &__subheader {
+            font-size: 20px;
+        }
+    }
+    .promo {
+        &__icons {
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        &__icon {
+            margin-bottom: 20px;
+        }
+    }
+}
+

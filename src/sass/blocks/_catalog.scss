@@ -8,6 +8,8 @@
         align-items: center;
         margin-bottom: 0;
         padding-left: 0;
+        width: 100%;
+
     }
     &__tab {
         width: 222px;
@@ -26,7 +28,9 @@
         &:hover {
             box-shadow: 2px 2px 20px $main-color;
             border: none;
-
+        }
+        &:nth-child(3) {
+            margin-right: 0;
         }
         div {
             transform: skewX(25deg);

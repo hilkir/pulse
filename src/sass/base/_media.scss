@@ -17,7 +17,9 @@
             background-color: $main-color;
             border: none;
         }
-
+    }
+    div.catalog__content {
+        justify-content: space-evenly;
     }
 
 }
@@ -44,7 +46,7 @@
                 margin-bottom: 3px;
             }
         }
-}
+    }
 
     .benefits {
         &__blocks {
@@ -61,6 +63,57 @@
         }
 
     } 
+
+    .catalog {
+        li.catalog__tab {
+            width: 150px;
+            font-size: 14px;
+        }
+    }
+    div.catalog__content {
+        justify-content: space-evenly;
+    }
+
+    div.feedbacks {
+        &__feedback {
+            margin-top: 30px;
+            div {
+                margin-left: 20px;
+            }
+        }
+        &__name {
+            font-size: 13px;
+        }
+        &__achive {
+            font-size: 12px;
+        }
+        &__text {
+            font-size: 11px;
+        }  
+    }
+    img.feedbacks {
+        &__img {
+            width: 100px;
+            height: 100px;
+        } 
+    }
+
+    div.footer {
+        &__info {
+            padding: 25px;
+            width: 370px;
+            height: 180px;
+            a.footer__phone {
+                margin-bottom: 20px;
+            }
+        }
+        &__social {
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
 }
 
 @media (max-width: 540px) {
@@ -86,6 +139,14 @@
             }
         }
     }
+
+    div.promo {
+        &__icons {
+            justify-content: space-evenly;
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
     .carousel {
         &__inner {
             img {
@@ -96,8 +157,23 @@
     .tns-nav {
         transform: translateX(50%);
     }
+    
+    .catalog {
+        li.catalog__tab {
+            height: 40px;
+            width: 110px;
+            font-size: 10px;
+            line-height: 40px;
+        }
+    }
+    ul.catalog__tabs {
+        margin-top: 30px;
+        }
+    }
 
-}
+    h2.title {
+        font-size: 25px;
+    }
 
 @media (max-width: 400px) {
     h1.promo{
@@ -110,14 +186,37 @@
             font-size: 20px;
         }
     }
-    .promo {
+    div.promo {
         &__icons {
-            flex-direction: column;
+            justify-content: space-evenly;
             margin-top: 20px;
+            width: 100%;
         }
         &__icon {
             margin-bottom: 20px;
+            font-size: 14px;
+            img {
+                width: 32px;
+                height: 36px;
+            }
+        }
+    }
+    button.button_main {
+        margin-top: 35px;
+    }
+    section.benefits {
+        padding: 40px 20px 83px 20px;
+    }
+    #consultation, #order, #thanks {
+        width: 312px;
+        min-height: 332px;
+        input {
+            width: 240px;
+            height: 40px;
+        }
+        button.button_submit {
+            width: 240px;
+            font-size: 12px;
         }
     }
 }
-

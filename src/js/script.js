@@ -57,3 +57,49 @@ const slider = tns({
         $('.overlay, #order').fadeIn('slow');
       });
     });
+
+
+      $('input[name=phone]').mask("+375(99) 999-99-99");
+
+      $('form').submit(function(e) {
+        e.preventDefault  ();
+
+/*         if(!$(this).valid()) {
+          return;
+        } */
+
+        $.ajax({
+          type: "POST",
+          url: "mailer/smart.php",
+          data: $(this).serialize()
+        }).error(function (a, b, c){
+          console.log(a)
+          console.log(b)
+          console.log(c)
+        }).done(function (){
+          $(this).find("input").val("");
+          $('#consultation, #order').fadeOut();
+          $('.overlay, #thanks').fadeIn('slow');
+
+          $('form').trigger('reset');
+        });
+        return false;
+      });
+
+      //smooth scroll and page up
+
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 1600) {
+          $('.pageup').fadeIn ();
+        } else {
+          $('.pageup').fadeOut();
+        }
+      });
+
+      // animation
+
+      new WOW().init();
+
+
+
+    

@@ -7,12 +7,13 @@
     <title>Pulse</title>
     <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;500;700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -51,7 +52,7 @@
                 <button data-modal="consultation" class="button button_main">ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ</button>
                 <div class="promo__link">
                     или
-                    <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
+                    <a href="#catalog">ПЕРЕЙТИ В КАТАЛОГ</a>
                 </div>
             </div>
         </div>
@@ -66,7 +67,7 @@
                         <div class="benefits__text">Делимся опытом</div>
                         <div class="benefits__subtext">Наши сотрудники всегда готовы поделиться своим опытом, так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</div>
                     </div>
-                    <div>
+                    <div class="benefits_animated">
                         <img src="icons/heart.png" alt="heart">
                         <div class="benefits__text">Заботимся о здоровье</div>
                         <div class="benefits__subtext">Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!</div>
@@ -89,27 +90,27 @@
                 Просто заполните форму заявки <br> и мы перезвоним вам в течении 10 минут
             </div>
             <form class="feed-form" action="#">
-                <input name="phone" required placeholder="Ваше имя" type="text">
-                <input name="tel" required placeholder="Ваш телефон" type="number">
+                <input name="name" required placeholder="Ваше имя" type="text">
+                <input name="phone" required placeholder="Ваш телефон">
                 <input name="email" required placeholder="Ваш e-mail" type="email">
                 <button class="button button_submit">ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ</button>
             </form>
         </div>
     </div>
 
-    <section class="carousel">
+    <div class="carousel">
         <div class="container">
             <div class="carousel__inner">
                 <div><img src="img/slide_1.jpg" alt="1"></div>
                 <div><img src="img/slide_2.png" alt="2"></div>
                 <div><img src="img/slide_3.png" alt="3"></div>
             </div>
-            <button type="button" class="prev"><img src="icons/left.svg"></button>
-            <button type="button" class="next"><img src="icons/right.svg"></button>
+            <button type="button" class="prev"><img src="icons/left.svg" alt="left"></button>
+            <button type="button" class="next"><img src="icons/right.svg" alt="right"></button>
         </div>
-    </section>
+    </div>
 
-    <section class="catalog">
+    <section class="catalog" id="catalog">
         <div class="container">
             <h2 class="title">Каталог пульсометров</h2>
             <ul class="catalog__tabs">
@@ -405,7 +406,7 @@
     <section class="feedbacks">
         <div class="container">
             <h2 class="title">отзывы клиентов</h2>
-            <div class="feedbacks__feedback">
+            <div class="feedbacks__feedback animate__animated animate__fadeInUp wow" data-wow-duration="1s" data-wow-delay="0.1s">
                 <img src="img/feedback_1.png" alt="1" class="feedbacks__img">
                 <div>
                     <div class="feedbacks__name">Ирина Иванченко</div>
@@ -413,7 +414,7 @@
                     <div class="feedbacks__text">Не знала, что себе купить - обратилась к ребятам из RunSmart - подобрали пульсометр, который подошёл именно под мои цели и финансовые возможности. Через некоторое время решила обновить гаджет - не раздумывая обратилась туда же.<br><br> Новые цели - новый гаджет!<br> <br>                    Спасибо, RunSmart!</div>
                 </div>
             </div>
-            <div class="feedbacks__feedback">
+            <div class="feedbacks__feedback animate__animated animate__fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                 <img src="img/feedback_2.png" alt="1" class="feedbacks__img">
                 <div>
                     <div class="feedbacks__name">Иван Сёмочкин</div>
@@ -421,7 +422,7 @@
                     <div class="feedbacks__text">Крутая штука-пульсометр. Обычно без них бегал. Оказывается только хуже себе делал.<br>Купил пульсометр, ещё в подарок получил тренировку. Со мной вместе провели первую тренировку, научили пользоваться новым гаджетом. Также объяснили основы анатомии, составили план тренировок на месяц вперёд.<br><br>С ними подготовился к своему первому полумарафону! Спасибо!!!</div>
                 </div>
             </div>
-            <div class="feedbacks__feedback">
+            <div class="feedbacks__feedback animate__animated animate__fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                 <img src="img/feedback_3.png" alt="1" class="feedbacks__img">
                 <div>
                     <div class="feedbacks__name">Юлия Дашкина</div>
@@ -433,7 +434,7 @@
     </section>
 
     <footer class="footer">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Add273983f06e2a37929965fcb2ad09becc7dc0951beea434962db4031627b18d&amp;width=100%25&amp;height=630&amp;lang=ru_RU&amp;scroll=true"></script>
+        <script src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Add273983f06e2a37929965fcb2ad09becc7dc0951beea434962db4031627b18d&amp;width=100%25&amp;height=630&amp;lang=ru_RU&amp;scroll=true"></script>
         <div class="footer__info">
             <address class="footer__addr">Москва, Мясницкий проезд, д.3с1</address>
             <a class="footer__phone" href="tel:84999228974">8 (499) 922-89-74</a>
@@ -451,8 +452,8 @@
             <div class="modal__subtitle">Просто заполните форму заявки</div>
             <div class="modal__descr">и мы перезвоним вам в течение 10 минут</div>
             <form class="feed-form feed-form_mt25" action="#">
-                <input name="phone" required placeholder="Ваше имя" type="text">
-                <input name="tel" required placeholder="Ваш телефон" type="number">
+                <input name="name" required placeholder="Ваше имя" type="text">
+                <input name="phone" required placeholder="Ваш телефон">
                 <input name="email" required placeholder="Ваш e-mail" type="email">
                 <button class="button button_submit">ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ</button>
             </form>
@@ -463,8 +464,8 @@
             <div class="modal__subtitle">Ваш заказ:</div>
             <div class="modal__descr">Пульсометр Polar FT1</div>
             <form class="feed-form feed-form_mt25" action="#">
-                <input name="phone" required placeholder="Ваше имя" type="text">
-                <input name="tel" required placeholder="Ваш телефон" type="number">
+                <input name="name" required placeholder="Ваше имя" type="text">
+                <input name="phone" required placeholder="Ваш телефон">
                 <input name="email" required placeholder="Ваш e-mail" type="email">
                 <button class="button button_submit">купить</button>
             </form>
@@ -477,8 +478,14 @@
         </div>
     </div>
 
+    <a href="#up" class="pageup">
+        <img src="icons/circle-chevron-up-solid.svg" alt="up">
+    </a>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <SCript src="js/script.js"></SCript>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <Script src="js/script.js"></Script>
 </body>
 </html>
